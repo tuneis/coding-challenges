@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace CodingChallenges
 {
@@ -6,7 +7,9 @@ namespace CodingChallenges
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Debug.WriteLine(Challenges.FirstReverse("Reverse This!"));
+            Debug.WriteLine(Challenges.FirstFactorial(8));
+            Debug.WriteLine(Challenges.LongestWord("I love dogs acre"));
         }
     }
 }
