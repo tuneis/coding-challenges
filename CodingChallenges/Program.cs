@@ -13,6 +13,7 @@ namespace CodingChallenges
             // incrementer
             int i = 1;
 
+            #region Easy Difficulty
             // Challenge 1
             Console.WriteLine($"Challenge {i++}: {Challenges.FirstReverse("Reverse This!")}");
 
@@ -30,6 +31,7 @@ namespace CodingChallenges
 
             // Challenge 6
             Console.WriteLine($"Challenge {i++}: {Challenges.LetterCapitalize("i ran there")}");
+            #endregion
 
             // wait to exit until user key press
             Console.ReadKey();
