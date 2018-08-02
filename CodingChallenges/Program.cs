@@ -43,6 +43,9 @@ namespace CodingChallenges
 
             // Challenge 10
             Console.WriteLine($"Challenge {i++}: {Challenges.AlphabetSoup("coderbyte")}");
+
+            // Challenge 10
+            Console.WriteLine($"Challenge {i++}: {Challenges.KaprekarsConstant(9831)}");
             #endregion
 
             // wait to exit until user key press
