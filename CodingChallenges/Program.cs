@@ -34,6 +34,9 @@ namespace CodingChallenges
 
             // Challenge 6
             Console.WriteLine($"Challenge {i++}: {Challenges.SimpleSymbols("+f++d++++s+g=")}");
+
+            // Challenge 7
+            Console.WriteLine($"Challenge {i++}: {Challenges.CheckNums(67, 67)}");
             #endregion
 
             // wait to exit until user key press
