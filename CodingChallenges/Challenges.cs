@@ -208,9 +208,7 @@ namespace CodingChallenges
                 result = asc > desc ? asc - desc : desc - asc;
                 count++;
             }
-
             return count;
-
         }
     }
 }
