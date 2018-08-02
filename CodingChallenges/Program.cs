@@ -40,6 +40,9 @@ namespace CodingChallenges
 
             // Challenge 9
             Console.WriteLine($"Challenge {i++}: {Challenges.TimeConvert(63)}");
+
+            // Challenge 10
+            Console.WriteLine($"Challenge {i++}: {Challenges.AlphabetSoup("coderbyte")}");
             #endregion
 
             // wait to exit until user key press

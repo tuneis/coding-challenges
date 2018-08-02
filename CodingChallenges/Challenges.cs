@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -165,6 +166,17 @@ namespace CodingChallenges
         {
             var ts = TimeSpan.FromMinutes(num);
             return $"{ts.Hours}:{ts.Minutes}";
+        }
+
+        /// <summary>
+        /// Using the C# language, have the function AlphabetSoup(str) take the str string parameter being passed and return the string with the letters in alphabetical order (ie. hello becomes ehllo). 
+        /// Assume numbers and punctuation symbols will not be included in the string. 
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        public static string AlphabetSoup(string str)
+        {
+            return string.Join(null, str.OrderBy(s => (int)s).Select(s => s));
         }
 
     }
