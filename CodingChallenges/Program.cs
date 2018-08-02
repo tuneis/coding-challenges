@@ -32,11 +32,14 @@ namespace CodingChallenges
             // Challenge 6
             Console.WriteLine($"Challenge {i++}: {Challenges.LetterCapitalize("i ran there")}");
 
-            // Challenge 6
+            // Challenge 7
             Console.WriteLine($"Challenge {i++}: {Challenges.SimpleSymbols("+f++d++++s+g=")}");
 
-            // Challenge 7
+            // Challenge 8
             Console.WriteLine($"Challenge {i++}: {Challenges.CheckNums(67, 67)}");
+
+            // Challenge 9
+            Console.WriteLine($"Challenge {i++}: {Challenges.TimeConvert(63)}");
             #endregion
 
             // wait to exit until user key press

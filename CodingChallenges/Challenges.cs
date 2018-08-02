@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace CodingChallenges
@@ -152,6 +153,18 @@ namespace CodingChallenges
         public static string CheckNums(int num1, int num2)
         {
             return num1 == num2 ? "-1" : num2 > num1 ? "true" : "false";
+        }
+
+        /// <summary>
+        /// Using the C# language, have the function TimeConvert(num) take the num parameter being passed and return the number of hours and minutes the parameter converts to (ie. if num = 63 then the output should be 1:3). 
+        /// Separate the number of hours and minutes with a colon. 
+        /// </summary>
+        /// <param name="num"></param>
+        /// <returns></returns>
+        public static string TimeConvert(int num)
+        {
+            var ts = TimeSpan.FromMinutes(num);
+            return $"{ts.Hours}:{ts.Minutes}";
         }
 
     }
