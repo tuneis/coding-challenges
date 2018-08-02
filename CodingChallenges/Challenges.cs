@@ -103,5 +103,15 @@ namespace CodingChallenges
             }
             return num;
         }
+
+        /// <summary>
+        /// Using the C# language, have the function LetterCapitalize(str) take the str parameter being passed and capitalize the first letter of each word. Words will be separated by only one space. 
+        /// </summary>
+        /// <param name="num"></param>
+        /// <returns></returns>
+        public static string LetterCapitalize(string str)
+        {
+            return string.Join(' ', str.Split(' ').Select(s => char.ToUpper(s[0]) + s.Substring(1, s.Length - 1)));
+        }
     }
 }

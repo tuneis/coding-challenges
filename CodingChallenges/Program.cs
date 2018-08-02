@@ -25,8 +25,11 @@ namespace CodingChallenges
             // Challenge 4
             Console.WriteLine($"Challenge {i++}: {Challenges.LetterChanges("fun times!")}");
 
-            // Challenge 4
+            // Challenge 5
             Console.WriteLine($"Challenge {i++}: {Challenges.SimpleAdding(140)}");
+
+            // Challenge 6
+            Console.WriteLine($"Challenge {i++}: {Challenges.LetterCapitalize("i ran there")}");
 
             // wait to exit until user key press
             Console.ReadKey();
