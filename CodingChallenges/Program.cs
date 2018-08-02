@@ -20,7 +20,10 @@ namespace CodingChallenges
             Console.WriteLine($"Challenge {i++}: {Challenges.FirstFactorial(8)}");
 
             // Challenge 3
-            Console.WriteLine($"Challenge {i++}: {Challenges.LongestWord("I love dogs acre")}");
+            Console.WriteLine($"Challenge {i++}: {Challenges.LongestWord("I love dogs")}");
+
+            // Challenge 4
+            Console.WriteLine($"Challenge {i++}: {Challenges.LetterChanges("fun times!")}");
 
             // wait to exit until user key press
             Console.ReadKey();
