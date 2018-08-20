@@ -13,7 +13,6 @@ namespace CodingChallenges
             // incrementer
             int i = 1;
 
-            #region Easy Difficulty
             // Challenge 1
             Console.WriteLine($"Challenge {i++}: {Challenges.FirstReverse("Reverse This!")}");
 
@@ -46,7 +45,20 @@ namespace CodingChallenges
 
             // Challenge 11
             Console.WriteLine($"Challenge {i++}: {Challenges.KaprekarsConstant(9831)}");
-            #endregion
+
+            // Challenge 12
+            //Console.WriteLine($"Challenge {i++}: {Challenges.ChessboardTraveling("(2 2)(4 3)")}");
+            //Console.WriteLine($"Challenge {i++}: {Challenges.ChessboardTraveling("(1 1)(3 3)")}");
+            //Console.WriteLine($"Challenge {i++}: {Challenges.ChessboardTraveling("(1 1)(2 2)")}");
+
+            // Hacker Rank Challenges
+            Console.WriteLine($"Challenge {i++}: {Challenges.DiagonalAbsoluteDifference(new int[][] { new int[] { 11, 2, 4 }, new int[] { 4, 5, 6 }, new int[] { 10, 8, -12 }, })}");
+            Challenges.PlusMinus(new int[] { -4, 3, -9, 0, 4, 1 });
+            Challenges.Staircase(6);
+            Challenges.MiniMaxSum(new int[] { 256741038, 623958417, 467905213, 714532089, 938071625 });
+            Challenges.BirthdayCakeCandles(new int[] { 3, 2, 1, 3 });
+            Challenges.TimeConversion("07:05:45PM");
+            Challenges.Kangaroo(0, 3, 4, 2);
 
             // wait to exit until user key press
             Console.ReadKey();

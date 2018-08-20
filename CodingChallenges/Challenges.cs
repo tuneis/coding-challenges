@@ -210,5 +210,175 @@ namespace CodingChallenges
             }
             return count;
         }
+
+        ///// <summary>
+        ///// Using the C# language, have the function ChessboardTraveling(str) read str which will be a string consisting of the location of a space on a standard 8x8 chess board with no pieces on the board along with another space on the chess board.
+        ///// The structure of str will be the following: "(x y)(a b)" where (x y) represents the position you are currently on with x and y ranging from 1 to 8 and (a b) represents some other space on the chess board with a and b also ranging from 1 to 8 where a > x and b > y. 
+        ///// Your program should determine how many ways there are of traveling from (x y) on the board to (a b) moving only up and to the right. 
+        ///// For example: if str is (1 1)(2 2) then your program should output 2 because there are only two possible ways to travel from space (1 1) on a chessboard to space (2 2) while making only moves up and to the right. 
+        ///// </summary>
+        ///// <param name="str"></param>
+        ///// <returns></returns>
+        //public static string ChessboardTraveling(string str)
+        //{
+
+        //}
+
+        /// <summary>
+        /// Given a square matrix, calculate the absolute difference between the sums of its diagonals.
+        /// </summary>
+        public static int DiagonalAbsoluteDifference(int[][] arr)
+        {
+            // left diagonal and right diagonal totals
+            int ld = 0;
+            int rd = 0;
+
+            // loop through matrix
+            for (int i = 0; i < arr.Length; i++)
+            {
+                // add to left diagonal
+                ld += arr[i][i];
+
+                // add to right diagonal
+                rd += arr[i][arr.Length - 1 - i];
+            }
+            return Math.Abs(ld - rd);
+        }
+
+        /// <summary>
+        /// Given an array of integers, calculate the fractions of its elements that are positive, negative, and are zeros. Print the decimal value of each fraction on a new line.
+        /// </summary>
+        /// <param name="arr"></param>
+        public static void PlusMinus(int[] arr)
+        {
+            // positive, negative, zeroes counters
+            var p = 0;
+            var n = 0;
+            var z = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] > 0)
+                    p++;
+                else if (arr[i] == 0)
+                    z++;
+                else
+                    n++;
+            }
+            Console.WriteLine(p / (float)arr.Length);
+            Console.WriteLine(n / (float)arr.Length);
+            Console.WriteLine(z / (float)arr.Length);
+
+        }
+
+        /// <summary>
+        /// Write a program that prints a right aligned staircase of size n.
+        /// </summary>
+        /// <param name="n"></param>
+        public static void Staircase(int n)
+        {
+            for (int i = 1; i <= n; i++)
+            {
+                var stair = "";
+                for (int j = 1; j <= n; j++)
+                {
+                    stair += n - i < j ? "#" : " ";
+                }
+                Console.WriteLine(stair);
+            }
+        }
+
+        /// <summary>
+        /// Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers. 
+        /// Then print the respective minimum and maximum values as a single line of two space-separated long integers.
+        /// </summary>
+        /// <param name="arr"></param>
+        public static void MiniMaxSum(int[] arr)
+        {
+            // declare min sum and max sum and skip index
+            long minSum = long.MaxValue;
+            long maxSum = long.MinValue;
+            long skipIndex = 0;
+
+            // loop through arr
+            for (int i = 0; i < arr.Length; i++)
+            {
+                // declare min temporary sum
+                long tempSum = 0;
+
+                // loop through the array again
+                for (int j = 0; j < arr.Length; j++)
+                {
+                    // skip an element so we only sum n - 1 elements
+                    if (j == skipIndex)
+                        continue;
+                    tempSum += arr[j];
+                }
+
+                // check if temp sum is less than min sum
+                if (tempSum < minSum)
+                    minSum = tempSum;
+
+                // check it temp sum is greater than max sum
+                if (tempSum > maxSum)
+                    maxSum = tempSum;
+
+                // increment the skip index
+                skipIndex++;
+            }
+
+            Console.WriteLine($"{minSum} {maxSum}");
+        }
+
+        /// <summary>
+        /// You are in charge of the cake for your niece's birthday and have decided the cake will have one candle for each year of her total age.
+        /// When she blows out the candles, she’ll only be able to blow out the tallest ones.
+        /// Your task is to find out how many candles she can successfully blow out.
+        /// For example, if your niece is turning 4 years old, and the cake will have 4 candles of height 4, 4, 1, 3, she will be able to blow out 2 candles successfully, since the tallest candles are of height 4 and there are 2 such candles.
+        /// </summary>
+        /// <param name="ar"></param>
+        /// <returns></returns>
+        public static int BirthdayCakeCandles(int[] ar)
+        {
+            // pre calculate max before filtering by count
+            var max = ar.Max();
+            return ar.Where(s => s == max).Count();
+        }
+
+        /// <summary>
+        /// Given a time in 12-hour AM/PM format, convert it to military (24-hour) time.
+        /// Note: Midnight is 12:00:00AM on a 12-hour clock, and 00:00:00 on a 24-hour clock.Noon is 12:00:00PM on a 12-hour clock, and 12:00:00 on a 24-hour clock.
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
+        public static string TimeConversion(string s)
+        {
+            // parse time string
+            var result = DateTime.TryParse(s, out DateTime date);
+
+            // convert to military time
+            var parsed = date.ToString("HH:mm:ss");
+            return parsed;
+        }
+
+        /// <summary>
+        /// https://www.hackerrank.com/challenges/kangaroo/problem
+        /// </summary>
+        /// <param name="x1"></param>
+        /// <param name="v1"></param>
+        /// <param name="x2"></param>
+        /// <param name="v2"></param>
+        /// <returns></returns>
+        public static string Kangaroo(int x1, int v1, int x2, int v2)
+        {
+            while (x1 < 10000 || x2 < 10000)
+            {
+                if (x1 == x2)
+                    return "YES";
+
+                x1 += v1;
+                x2 += v2;
+            }
+            return "NO";
+        }
     }
 }
